@@ -15,24 +15,13 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 CC = gcc
-SU = sudo
-NAME = cdos-writer
 IN = main.c
-OUT = /usr/local/bin/$(NAME)
+OUT = cdos-writer
 
-all:
-	$(CC) $(IN) -o $(NAME)
-	$(SU) cp $(NAME) $(OUT)
-
-compile:
-	$(CC) $(IN) -o $(NAME)
+compile: clean
+	$(CC) $(IN) -o $(OUT)
 
 clean:
-	rm -f $(NAME)
+	rm -f $(OUT)
 
-install: all
-
-remove:
-	$(SU) rm -f $(OUT)
-
-.PHONY: all compile clean install remove
+.PHONY: all clean

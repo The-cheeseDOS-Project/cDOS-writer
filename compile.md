@@ -1,24 +1,9 @@
-## Compile and install
+## Compile
 ```
 make
 ```
 
-## Compile
-```
-make compile
-```
-
-## Install
-```
-make install
-```
-
-## Remove ./cdos-writer
-```
-make clean
-```
-
 ## Remove
 ```
-make remove
+make clean
 ```

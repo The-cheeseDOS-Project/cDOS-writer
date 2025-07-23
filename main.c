@@ -21,7 +21,7 @@
 #include <unistd.h>
 #include <string.h>
 
-#define SOURCE "https://api.github.com/repos/bluMATRIKZ/cheeseDOS/releases/latest"
+#define SOURCE "https://api.github.com/repos/The-cheeseDOS-Project/cheeseDOS/releases/latest"
 #define TMP "/tmp/cdos.iso"
 #define DISK_LISTER "lsblk"
 #define BURNER "wodim"

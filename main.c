@@ -21,6 +21,7 @@
 #include <unistd.h>
 #include <string.h>
 
+#define VER "1.1.1"
 #define SOURCE "https://api.github.com/repos/The-cheeseDOS-Project/cheeseDOS/releases/latest"
 #define TMP "/tmp/cdos.iso"
 #define DISK_LISTER "lsblk"
@@ -34,8 +35,12 @@ void prompt(const char *msg, char *input, size_t size) {
     input[strcspn(input, "\n")] = 0;
 }
 
-// Check for root
+// Main
 int main() {
+    // Print out version
+    printf("cDOS-writer v%s\n\n", VER);
+   
+    // Check for root
     if (getuid() != 0) {
         fprintf(stderr, "This tool must be run as root.\n");
         return 1;
